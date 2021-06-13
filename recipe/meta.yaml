@@ -24,7 +24,6 @@ requirements:
     - toml
   run:
     - python
-    - importlib_metadata >=0.5  # [py<38]
 
 test:
   imports:
