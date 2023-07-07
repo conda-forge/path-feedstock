@@ -1,11 +1,11 @@
-About path
-==========
+About path-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/path-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jaraco/path
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/path-feedstock/blob/main/LICENSE.txt)
 
 Summary: A module wrapper for os.path
 
