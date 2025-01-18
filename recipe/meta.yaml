@@ -1,33 +1,33 @@
-{% set version = "17.0.0" %}
+{% set version = "17.1.0" %}
 
 package:
   name: path
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/path/path-{{ version }}.tar.gz
-  sha256: e1540261d22df1416fb1b498b3b1ed5353a371a48fe197d66611bb01e7fab2d5
+  url: https://pypi.org/packages/source/p/path/path-{{ version }}.tar.gz
+  sha256: d41e05ed4fa1d4f6d702df3c1e0a1a255d7b544287432456455dc7c51e5f98e9
 
 build:
   number: 0
-  skip: true  # [py<35]
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python {{ python_min }}
     - pip
+    - setuptools >=61.2
     - setuptools_scm >=3.4.1
     - toml
   run:
-    - python
+    - python >={{ python_min }}
 
 test:
   imports:
     - path
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jaraco/path
