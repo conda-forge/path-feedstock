@@ -17,8 +17,8 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools >=61.2
     - setuptools_scm >=3.4.1
-    - setuptools>=61.2
     - toml
   run:
     - python >={{ python_min }}
